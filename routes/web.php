@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/{offset?}', 'IndexController@index')->name('index')->where('offset', '[0-9]+');
+Route::get('/search/{name?}', 'IndexController@search')->name('search')->where('name', '[A-Za-z]+');
 Route::get('/character/{id}', 'IndexController@character')->name('character');
-Route::get('/comics/{url}', 'IndexController@comic')->name('comics');
+Route::get('/comics/{url}', 'IndexController@comics')->name('comics');
 
 

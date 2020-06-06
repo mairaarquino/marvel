@@ -3,27 +3,24 @@
     @foreach ($result as $r)
         <div class="buttons">
             <button onclick="window.history.back();" class="btn btn-danger"> Voltar</button>
-            <h4 style="margin-top: 30px;">{{$r->name}}</h4>
+            <h4 style="margin-top: 30px;">{{$r->title}}</h4>
             <p></p>
         </div>
         <div class="form-group">
             <div class='input-group'>
                 <?= '<img src="'.$r->thumbnail->path.'.'.$r->thumbnail->extension.'" class="img"/>'; ?>
             </div>
-            @if($r->description == "")
-                <p>Este personagem não possui descrição no site da Marvel.</p>
-            @endif
             <p>{{$r->description}}</p>
         </div>
-        <div class="comics">
-            @foreach($r->comics->items as $comic)
-                <?php 
-                    $array_url = explode("/", $comic->resourceURI);
-                    $id = end($array_url);
-                ?>
-                <a href="{{route('comics', $id)}}">{{$comic->name}}</a><br/>
+        @if($r->images)
+        <div class='form-group' style="flex-wrap: wrap;">
+            @foreach($r->images as $img)
+                <?= '<a href="'.$img->path.'.'.$r->thumbnail->extension.'" target="_blank">
+                        <img src="'.$img->path.'.'.$r->thumbnail->extension.'" class="img-sm"/>
+                    </a>'; ?>
             @endforeach
         </div>
-        @endforeach  
-</body>
-</html>
+        @endif
+
+    @endforeach
+</div>

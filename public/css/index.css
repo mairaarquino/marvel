@@ -1,20 +1,54 @@
 body {
-    background-color: #ec1d24;
+    background-color: #d40317;
 }
 .img {
     width: 300px;
     height: 300px;
+}
+.img-sm {
+    width: 100px;
+    margin: 20px;
 }
 .show {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .input-group {
     background-color: white;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     width: 350px;
     margin: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+    color: white;
+    text-align: center;padding-bottom:25px;
+    letter-spacing: 10px;
+}
+button.btn.btn-danger {
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 71px;
+    height: 36px;
+}
+p {
+    margin-top: 30px;
 }
