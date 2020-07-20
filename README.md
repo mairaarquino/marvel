@@ -1,4 +1,5 @@
 # Lista de Personagens/Quadrinhos
+<img alt="" src="https://img.shields.io/github/repo-size/mairaarquino/marvel" /> <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/mairaarquino/marvel" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/mairaarquino/marvel" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/mairaarquino/marvel" />
 
 ## Como instalar?
 Para instalar as dependências:
