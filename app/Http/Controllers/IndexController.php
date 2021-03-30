@@ -52,8 +52,8 @@ class IndexController extends Controller
         return view('comic', ['result'=>$result]);
     }
     public function generateURL($url) {
-        $public_key = '7d50c74f2e3c0d144a7c154b759ef920';
-        $private_key = '484ddd43e8e5e70dd95d3239d73d37bc951a2bd7';
+        $public_key = '40556e7f1023b0125590955d4f0e0bb6';
+        $private_key = '3f0d0707468c889771d19b90c826548609075d97';
 
         $ts= time();
         $hash = md5($ts.$private_key.$public_key);
